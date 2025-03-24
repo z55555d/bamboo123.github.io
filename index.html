@@ -51,12 +51,40 @@
             background-color: #34495e;
             color: white;
             padding: 3rem;
-            text-align: center;
+        }
+
+        /* 新增联系容器样式 */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+            flex: 1;
+            max-width: 500px;
+        }
+
+        /* 二维码样式 */
+        .qrcode-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .qrcode-box img {
+            width: 200px;
+            height: 200px;
+            margin: 1rem 0;
+        }
+
+        .qrcode-box p {
+            color: #34495e;
+            font-size: 0.9rem;
         }
 
         input, textarea {
@@ -74,39 +102,15 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-        }
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+            width: 100%;
         }
 
-        .contact-form {
-            flex: 1;
-            max-width: 400px;
-        }
-
-        .qrcode-box {
-            background: white;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .qrcode-box img {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 1rem;
-        }
-
+        /* 移动端适配 */
         @media (max-width: 768px) {
             .contact-container {
                 flex-direction: column;
                 align-items: center;
+                gap: 2rem;
             }
             .qrcode-box {
                 order: -1;
@@ -120,6 +124,7 @@
     </header>
 
     <section class="products">
+        <!-- 产品卡片保持原有内容 -->
         <div class="product-card">
             <img src="https://raw.githubusercontent.com/z55555d/bamboo123.github.io/main/images/motor-a.jpg" alt="微型马达A型">
             <h2>微型马达A型</h2>
@@ -146,17 +151,21 @@
     </section>
 
     <section class="contact">
-        <div class="qrcode-box">
-                <h3>扫码联系客服</h3>
-                <img src="images/contact-qrcode.jpg" alt="微信公众号二维码">
-                <p>关注公众号获取最新资讯</p>
+        <div class="contact-container">
+            <!-- 联系表单 -->
+            <div class="contact-form">
+                <h2>联系我们</h2>
+                <p>地址：广东省东莞市麻涌镇茨菇园东路11号</p>
+                <p>电话：+86 18928247137</p>
+                <p>联系人：李先生</p>
             </div>
-        <div class="contact-form">
-            <h2>联系我们</h2>
-            <p>地址：广东省东莞市麻涌镇茨菇园东路11号</p>
-            <p>电话：+86 18928247137</p>
-            <p>联系人：李先生</p>
-            </form>
+
+            <!-- 新增二维码区块 -->
+            <div class="qrcode-box">
+                <h3>扫码添加微信</h3>
+                <img src="images/wechat-qrcode.jpg" alt="微信联系二维码">
+                <p>扫码添加客服微信<br>获取最新产品目录和报价</p>
+            </div>
         </div>
     </section>
 </body>
